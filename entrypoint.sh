@@ -8,7 +8,7 @@ init_options() {
   fi
 
   if [ -n "$INPUT_CROWDIN_BRANCH_NAME" ]; then
-    OPTIONS="${OPTIONS} --branch=\"${INPUT_CROWDIN_BRANCH_NAME}\""
+    OPTIONS="${OPTIONS} --branch=${INPUT_CROWDIN_BRANCH_NAME//$' '/'%20'}"
   fi
 
   if [ -n "$INPUT_IDENTITY" ]; then
