@@ -77,6 +77,7 @@ upload_translations() {
   fi
 
   echo "UPLOAD TRANSLATIONS"
+  echo "${CONFIG_OPTIONS} ${UPLOAD_TRANSLATIONS_OPTIONS}"
   crowdin upload translations "${CONFIG_OPTIONS}" "${UPLOAD_TRANSLATIONS_OPTIONS}"
 }
 
